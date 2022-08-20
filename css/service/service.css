@@ -1,0 +1,134 @@
+.service__title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #000;
+}
+.service__title-desc {
+  width: 500px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-grey);
+}
+.view {
+  margin-bottom: 40px;
+  position: relative;
+  display: block;
+  text-align: right;
+  font-weight: 400;
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transform: translateX(-20px);
+  color: #3771c8;
+}
+.view::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: -18px;
+  display: block;
+  text-align: center;
+  width: 110px;
+  height: 6px;
+  border: 1px solid #f9d15c;
+}
+.service__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.service__item {
+  display: flex;
+  width: 23%;
+  padding: 50px 10px 50px 20px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.service__item:not(:last-child) {
+  margin-right: 20px;
+}
+.service__item:hover {
+  box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.05);
+}
+.service__link {
+  display: block;
+  margin: 0 auto;
+}
+.service__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #f9d15c;
+  opacity: 0;
+}
+.show-service__icon {
+  animation: show-service 2s 1;
+  opacity: 1;
+}
+@keyframes show-service {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.service__icon-svg {
+  transform: translate(10px, 10px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.service__icon-svg path {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.5;
+  stroke-dasharray: 100 0;
+  animation: dasharray 2s infinite alternate;
+}
+.service__item:hover .service__icon-svg {
+  transform: translate(0px, 0px);
+}
+.service__item:hover .service__icon-svg path {
+  stroke-dasharray: 500 0;
+}
+@keyframes dasharray {
+  100% {
+    stroke-dasharray: 0 100;
+  }
+}
+.service__item-title {
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: 400;
+  font-size: var(--font-size-md);
+  line-height: 28px;
+  color: var(--color-dark-grey);
+}
+.service__item-desc {
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--color-light-grеy);
+}
+
+@media (max-width: 992px) {
+  .service__title {
+    text-align: center;
+  }
+  .service__title-desc {
+    width: 100%;
+  }
+  .service__item {
+    width: 100%;
+  }
+  .service__item:not(:last-child) {
+    margin: 0px 0px 10px;
+  }
+}

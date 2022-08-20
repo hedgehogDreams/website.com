@@ -1,0 +1,55 @@
+.footer {
+  margin-bottom: 60px;
+}
+.footer__container {
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__logo {
+  display: block;
+  margin-bottom: 24px;
+}
+.footer__desc {
+  margin-bottom: 30px;
+  width: 260px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font-size-base);
+  line-height: 24px;
+  color: var(--color-grey);
+}
+
+.footer__social-link_1:not(:last-child) {
+  margin-right: 30px;
+}
+.home-help-get {
+  font-style: normal;
+  font-size: var(--font-size-l);
+  line-height: 34px;
+  color: var(--color-dark-grey);
+}
+.home-help-get__link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font-size-base);
+  line-height: 18px;
+  color: var(--color-dark-grey);
+}
+@media (max-width: 992px) {
+  .footer__desc {
+    width: 200px;
+  }
+  .home-help-get {
+    font-size: calc(var(--font-size-l) / var(--fs-divider));
+    font-weight: 600;
+  }
+  .home-help-get__link {
+    font-size: calc(var(--font-size-base) / var(--fs-divider));
+  }
+}
+@media (max-width: 768px) {
+  .home-help-get {
+    font-size: calc(var(--font-size-l) / var(--fs-divider1));
+  }
+}
